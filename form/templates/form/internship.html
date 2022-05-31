@@ -2,7 +2,7 @@
 {% load tag %}
 {% block body%}
 {% load static %}
-<title>เอกสารการฝึกงาน {{step}}</title>
+<title>ส่งแบบฟอร์มสำหรับสถานที่ฝึกงาน</title>
 
 <head>
     <link rel="stylesheet" href="{% static 'form/css/internship.css' %}" >
@@ -106,7 +106,7 @@
             <!--<h2>This is step #{{step}}</h2>-->
             <h2 style="margin: 20px;"><img src="/static/images/p_step1.png">ขั้นตอนลำดับที่ 1 ลงทะเบียนขอใบส่งตัว </h2>
             <br>
-            <a href="{{init_form.file.url}" style="margin-left: 32px;">
+            <a href="{{init_form.file.url}}" style="margin-left: 32px;">
                 <b style="font-size: 20px;">&#128073; <u class="p12"> download</u></b>
             </a>
             <form method="POST" action="{% url 'form:internship' %}" enctype="multipart/form-data">

@@ -56,7 +56,8 @@
                     <div class="card mb-4">
                         <div class="card-header">ประวัติ</div>
                         <div class="card-body">
-                            <form>
+                            <form action="{% url 'account:profile' request.user.username%}" method="post">
+                                {% csrf_token %}
                                 {% if request.user.account.type == "Student" %}
                                 <!-- Form Group (id)-->
                                 <div class="mb-3">
@@ -115,7 +116,7 @@
                                     <!-- Form Group (email address)-->
                                     <div class="col-md-6">
                                         <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                                        <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="{{ request.user.email }}">   
+                                        <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="{{ request.user.email }}" name="email">   
                                     </div>
                                     <!-- Form Group (phone number)-->
                                     <div class="col-md-6">
