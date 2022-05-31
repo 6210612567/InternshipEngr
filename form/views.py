@@ -276,9 +276,7 @@ def response_form(request, trans_id):
         receiver_acc.receive_box.add(new_form)
         receiver_acc.save()
 
-        return render(request, "form/response.html", {
-            "done": 1
-        })
+        return HttpResponseRedirect(reverse("account:index"))
 
     return render(request, "form/response.html", {
         "this_file": transmit_file,

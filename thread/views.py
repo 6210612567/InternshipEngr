@@ -119,11 +119,11 @@ def update_thread(request, thread_id):
         if form.is_valid():
             header = form.cleaned_data['header']
             content = form.cleaned_data['content']
-            desc = request.POST["desc"]
+            # desc = request.POST["desc"]
             # Update  This Thread
             this_thread.header = header
             this_thread.content = content
-            this_thread.desc = desc
+            # this_thread.desc = desc
             this_thread.save()
 
             return HttpResponseRedirect(reverse("thread:thread", args=(this_thread.id,)))

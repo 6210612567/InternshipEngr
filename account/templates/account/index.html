@@ -155,19 +155,19 @@
                 
                 <div class="grid-container">
                     {% for x in annoucement_list%}
-                    <a dhref="{% url 'thread:thread' x.id %}">
-                        <div>
-                            <img class="img4 responsive" src="{{x.icon}}">
-                            <div class="div6 responsive p4">
-                                <h2>
-                                    {{x.header}}
-                                </h2>
-                                <p>
-                                    {{x.desc}}
-                                </p>
+                        <a href="{% url 'thread:thread' x.id %}">
+                            <div>
+                                <img class="img4 responsive" src="{{x.icon}}">
+                                <div class="div6 responsive p4">
+                                    <h2>
+                                        {{x.header}}
+                                    </h2>
+                                    <p>
+                                        {{x.desc}}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                     {% endfor %}
                 </div>
             {% endif %}
