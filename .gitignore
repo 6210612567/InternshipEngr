@@ -8,13 +8,13 @@
 *.pyc
 account/templates/account/register.html
 __pycache__
-# db.sqlite3
+db.sqlite3
 media
 account/migrations
 form/migrations
 thread/migrations
 transmit/migrations
-#static/
+static/
 # Backup files # 
 *.bak 
 

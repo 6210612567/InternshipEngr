@@ -110,7 +110,7 @@
                 <a href="{% url 'account:profile' request.user.username%}">
                     <p>โปรไฟล์</p>
                 </a>
-                {% if request.user.account.type == "Professor" or request.user.account.type == "Student"%}
+                {% if request.user.account.type == "Student"%}
                 <div class="line"></div>
                 <a href="{% url 'form:internship' %}">
                     <p>ระบบลงทะเบียนแจ้งสถานที่ฝึกงาน</p>
