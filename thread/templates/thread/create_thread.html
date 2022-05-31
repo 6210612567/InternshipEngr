@@ -1,12 +1,12 @@
 {% extends "thread/layout.html"%}
 {% block body%}
-<title>สร้างกระทู้</title>
+<title>สร้างบทความ</title>
 
 
 
 <form method="POST" action="{% url 'thread:create_thread' %}" enctype="multipart/form-data">
     {% csrf_token %}
-    <h1 style="text-align: center; margin: 50px;"><b>สร้างกระทู้</b></h1>
+    <h1 style="text-align: center; margin: 50px;"><b>สร้างบทความ</b></h1>
 
     <div class="container" >
         <div class="row">
@@ -15,13 +15,13 @@
             {%endif%}
             <div class="col" style="margin-top: 25px;">
                 <div class="form-group" style="width: 25em; margin-left: 5em;">
-                    <label><b class="p5">ชื่อกระทู้</b></label>
+                    <label><b class="p5">ชื่อบทความ</b></label>
                     <p><input type="text" name="header" class="form-control" maxlength="120" placeholder="Enter thread header" required/></input></p>
                     <br>
                 </div>
                 
                 <div class="form-group" style="width: 25em; margin-left: 5em;">
-                    <label><b class="p5">คำอธิบายกระทู้</b></label>
+                    <label><b class="p5">คำอธิบายบทความ</b></label>
                     <p><input type="text" name="desc" class="form-control" maxlength="300" placeholder="Enter thread header" required/></input></p>
                     <br>
                 </div>

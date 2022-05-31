@@ -140,23 +140,21 @@ def profile(request, username):
         last_name = request.POST["last_name"]
 
         tel = request.POST["tel"]
-        type = request.POST["type"]
         address = request.POST["address"]
         year = request.POST["year"]
         major = request.POST["major"]
 
         icon = "12312321"
 
-        myuser=Account.objects.get(username=username)
-        myuser.user.first_name=first_name 
-        myuser.user.last_name=last_name
-        myuser.user.email=email
-        myuser.tel=tel
-        myuser.type=type
-        myuser.address=address
-        myuser.year=year
-        myuser.major=major
-        myuser.icon=icon
+        myuser = Account.objects.get(username=username)
+        myuser.user.first_name = first_name
+        myuser.user.last_name = last_name
+        myuser.user.email = email
+        myuser.tel = tel
+        myuser.address = address
+        myuser.year = year
+        myuser.major = major
+        myuser.icon = icon
         myuser.save()
         messages.success(request, "Your account has been updated successfully")
         return redirect('account:profile')

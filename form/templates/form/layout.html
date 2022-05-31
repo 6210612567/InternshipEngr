@@ -131,14 +131,14 @@
                 {% if request.user.account.type == "Professor" or request.user.account.type == "Company"%}
                     <div class="line"></div>
                     <a href="{% url 'thread:create_thread' %}">
-                        <p>สร้างกระทู้</p>
+                        <p>สร้างบทความ</p>
                     </a>
                 {% endif %}
 
                 {% if request.user.is_superuser%}
                     <div class="line"></div>
                     <a href="{% url 'thread:admin' %}">
-                        <p>ตรวจสอบกระทู้</p>
+                        <p>ตรวจสอบบทความ</p>
                     </a>
                 {% endif %}
                 <div class="line"></div>
